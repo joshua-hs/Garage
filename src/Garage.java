@@ -21,29 +21,45 @@ public class Garage {
 		vehicles.add(vehicle);
 	}
 
-	public void removeVehicle(int id) {
+	public void removeVehicleById(int id) {
+		boolean vehicleRemoved = false;
 		for (int i = 0; i < vehicles.size(); i++) {
 			if (vehicles.get(i).getId() == id) {
 				vehicles.remove(i);
+				vehicleRemoved = true;
 			}
+		}
+		if (!vehicleRemoved) {
+			System.out.println("Couldn't find vehicle.");
 		}
 	}
 
+	public void removeVehiclesByType(String vehicleClass) {
+		System.out.println("Removing vehicles of type: " + vehicleClass + "...");
+		int removalCount = 0;
+		for (int i = 0; i < vehicles.size(); i++) {
+			if (vehicles.get(i).getClass().toString().toLowerCase().contains(vehicleClass.toLowerCase())) {
+				vehicles.remove(vehicles.get(i));
+				removalCount++;
+				i--;
+			}
+		}
+
+		System.out.println("Removed " + removalCount + " vehicle(s).");
+	}
+
 	public void fix(Vehicle vehicle) {
-		System.out.println("Bill is: " + calculateBill(vehicle));
+		System.out.println("Bill is: £" + String.format("%1.2f", calculateBill(vehicle)));
 	}
 
 	public void emptyGarage() {
 		vehicles.clear();
 	}
 
-	public String showVehicles() {
-		String returnString = "";
+	public void showVehicles() {
 		for (Vehicle vehicle : vehicles) {
-			returnString += vehicle.getName() + "\n";
+			System.out.println(vehicle.getName());
 		}
-
-		return returnString;
 	}
 
 }
