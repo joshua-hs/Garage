@@ -8,4 +8,12 @@ public class Tank extends Vehicle {
 		this.crewCount = crewCount;
 	}
 
+	public int getCrewCount() {
+		return this.crewCount;
+	}
+
+	public void setCrewCount(int crewCount) {
+		this.crewCount = crewCount;
+	}
+
 }

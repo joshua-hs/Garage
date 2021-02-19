@@ -28,11 +28,21 @@ public class Runner {
 
 		garage.showVehicles();
 
-		System.out.println("After removing via type");
+		System.out.println("After removing (cars) via type:");
 
 		garage.removeVehiclesByType("car");
 
 		garage.showVehicles();
+
+		System.out.println(panamera.getColor());
+		panamera.setColor("Black");
+		System.out.println(panamera.getColor());
+
+		System.out.println(multistrada.getMotorcycleType());
+
+		System.out.println(challenger2.getCrewCount());
+		challenger2.setCrewCount(9001); // vegeta triggered
+		System.out.println(challenger2.getCrewCount());
 
 	}
 

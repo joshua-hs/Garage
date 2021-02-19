@@ -58,7 +58,7 @@ public class Garage {
 
 	public void showVehicles() {
 		for (Vehicle vehicle : vehicles) {
-			System.out.println(vehicle.getName());
+			System.out.println(vehicle.getDetails());
 		}
 	}
 

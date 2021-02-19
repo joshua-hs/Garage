@@ -10,4 +10,20 @@ public class Car extends Vehicle {
 		this.horsepower = horsepower;
 	}
 
+	public String getTransmission() {
+		return this.transmission;
+	}
+
+	public void setTransmission(String transmission) {
+		this.transmission = transmission;
+	}
+
+	public int getHorsepower() {
+		return this.horsepower;
+	}
+
+	public void setHorsepower(int horsepower) {
+		this.horsepower = horsepower;
+	}
+
 }

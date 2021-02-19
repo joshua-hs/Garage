@@ -41,7 +41,43 @@ public class Vehicle {
 		return this.id;
 	}
 
-	public String getName() {
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getNumWheels() {
+		return this.numWheels;
+	}
+
+	public void setNumWheels(int numWheels) {
+		this.numWheels = numWheels;
+	}
+
+	public String getMake() {
+		return this.make;
+	}
+
+	public void setMake(String make) {
+		this.make = make;
+	}
+
+	public String getModel() {
+		return this.model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public String getColor() {
+		return this.color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public String getDetails() {
 		return "ID: " + this.id + ", Make: " + this.make + ", Model: " + this.model;
 	}
 

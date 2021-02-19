@@ -8,4 +8,12 @@ public class Motorcycle extends Vehicle {
 		this.motorcycleType = motorcycleType;
 	}
 
+	public String getMotorcycleType() {
+		return this.motorcycleType;
+	}
+
+	public void setMotorcycleType(String motorcycleType) {
+		this.motorcycleType = motorcycleType;
+	}
+
 }
